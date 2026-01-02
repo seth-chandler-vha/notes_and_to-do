@@ -1,448 +1,369 @@
-# Instructions for User: Working with Perplexity AI
+# User Instructions: Working with AI Agents in PARA
 
-**Repository**: notes_and_to-do  
-**System**: PARA Method (Building a Second Brain)  
-**Last Updated**: 2026-01-02
-
----
+This guide explains how to interact with Perplexity and other AI agents to maintain your notes_and_to-do repository without having to provide explicit folder paths or organization instructions each time.
 
 ## Overview
 
-This document provides you with simple, natural language prompts to use with Perplexity (or other AI agents) to maintain your notes repository. The AI will automatically handle file placement, naming conventions, metadata, and organizational structure based on the PARA system documented in the README.
+Your repository follows the PARA method (Projects, Areas, Resources, Archive). AI agents have been trained to automatically organize your content into the correct folders based on simple, natural language requests. You don't need to specify folder paths or category names - just describe what you want to do.
 
-## Quick Start: The Basic Prompt Pattern
+## Basic Principles
 
-**General Format**:
-```
-Create a note about [TOPIC] for [CONTEXT/PURPOSE]
-```
+**You provide**:
+- What you want to do (create, update, find, move)
+- The content or topic
+- Optional context (deadline, status, related items)
 
-The AI will:
-1. Ask clarifying questions if needed
-2. Determine the correct PARA category
-3. Suggest an appropriate filename
-4. Create the file with proper metadata
-5. Place it in the correct folder
-6. Structure the content appropriately
+**The AI agent handles**:
+- Determining the correct PARA category
+- Applying naming conventions
+- Adding metadata
+- Creating links between related notes
+- Suggesting when items should move categories
 
----
+## 11 Common Scenarios
+### Scenario 1: Starting a New Project
 
-## Scenario-Based Instructions
+**What you say**:
+- "I'm starting a website redesign project due in Q2 2025"
+- "Create notes for my kitchen renovation project, completion target summer"
+- "Start tracking the annual review process, due March 15"
 
-### Scenario 1: Starting a New Work Project
+**What the AI does**:
+- Creates file in `/projects` folder
+- Names it appropriately (e.g., `website-redesign-notes.md`)
+- Adds metadata with deadline
+- Links to related resources if they exist
 
-**When**: You're beginning a project with a specific goal and deadline
+**You don't need to say**:
+- "Create a file in the projects folder called..."
+- "This is a project because it has a deadline"
+- "Use the project template"
 
-**What to Type**:
-```
-Create a project note for [project name] with deadline [date]
-```
+### Scenario 2: Documenting Ongoing Responsibilities
 
-**Examples**:
-- "Create a project note for Joint Commission survey preparation with deadline March 15, 2026"
-- "Start a new project for Q1 provider recruitment ending March 31st"
-- "Create a project note for the spring pasture renovation project"
+**What you say**:
+- "Take notes on my professional development activities"
+- "I need to track health and fitness"
+- "Create an overview for home maintenance tasks"
 
-**What Perplexity Will Do**:
-- Place file in `/projects/`
-- Name it using lowercase-hyphen format
-- Add complete metadata (Created, Modified, Category: Project, Status: Active, DueDate)
-- Create sections for: Next Actions, Overview, Key Milestones, Notes
-- Ask for additional details if needed
+**What the AI does**:
+- Creates file in `/areas` folder
+- Uses format: `area-name-overview.md`
+- Adds metadata for ongoing responsibility
+- Suggests periodic review schedule
 
----
-
-### Scenario 2: Documenting an Ongoing Responsibility
-
-**When**: You need to track something you're responsible for indefinitely
-
-**What to Type**:
-```
-Create an area note for [responsibility name]
-```
-
-**Examples**:
-- "Create an area note for staff management"
-- "Start tracking property maintenance as an ongoing area"
-- "Create an area for compliance monitoring"
-- "I need an area note for my professional development"
-
-**What Perplexity Will Do**:
-- Place file in `/areas/`
-- Name it descriptively (e.g., `staff-management.md`)
-- Add metadata with Category: Area
-- Create sections for: Responsibilities, Current Focus, Standards/Goals
-- No deadline (ongoing nature)
-
----
+**You don't need to say**:
+- "This should go in areas because it's ongoing"
+- "Make it an area-type file"
 
 ### Scenario 3: Saving Reference Material
 
-**When**: You find useful information you want to keep for future use
-
-**What to Type**:
-```
-Create a resource note about [topic]
-```
-
-**Examples**:
-- "Create a resource note about Joint Commission standards"
-- "Save this as a resource about SQL query templates"
-- "Create a resource for pasture management best practices"
-- "I want to save these astrophotography equipment recommendations as a resource"
-
-**What Perplexity Will Do**:
-- Place file in `/resources/`
-- Name it by topic (e.g., `sql-query-templates.md`)
-- Add metadata with Category: Resource
-- Organize as reference material, not active work
-- Include sources, links, and key information
-
----
-
-### Scenario 4: Creating a To-Do List
-
-**When**: You need to track tasks or create a daily/weekly plan
-
-**What to Type**:
-```
-Create a to-do list for [timeframe/purpose]
-```
-
-**Examples**:
-- "Create my to-do list for today"
-- "Start a weekly planning list for this week"
-- "Create a task list for the Joint Commission project"
-- "I need a someday-maybe list for future ideas"
-
-**What Perplexity Will Do**:
-- Place file in `/to-do/`
-- Name appropriately (e.g., `daily-tasks-2026-01-02.md` or `weekly-planning.md`)
-- Format with checkboxes and priority indicators
-- Include due dates where applicable
-- Organize by priority: 🔴 High, 🟡 Medium, 🟢 Low
-
----
-
-### Scenario 5: Updating an Existing Note
-
-**When**: You need to add information to a note or update it
-
-**What to Type**:
-```
-Update [note name] with [new information]
-```
-
-**Examples**:
-- "Update the Joint Commission prep note with today's meeting notes"
-- "Add a new task to the staff management area"
-- "Update my daily to-do list - mark items complete and add new ones"
-- "Add this SQL query to my resources"
-
-**What Perplexity Will Do**:
-- Locate the existing file
-- Update the Modified date in metadata
-- Add your content in the appropriate section
-- Maintain existing structure and formatting
-- Update related links if needed
-
----
-
-### Scenario 6: Completing a Project (Archiving)
-
-**When**: A project is finished and you want to archive it
-
-**What to Type**:
-```
-Archive [project name] - it's complete
-```
-
-**Examples**:
-- "Archive the Q4 provider recruitment project - we hired everyone"
-- "The Joint Commission survey is done - archive that project"
-- "Move the pasture renovation project to archive - completed"
-
-**What Perplexity Will Do**:
-- Move file from `/projects/` to `/archive/projects/`
-- Update Status to "Complete" or "Archived"
-- Add completion date to filename if appropriate
-- Update Modified date
-- Preserve all content and links
-
----
-
-### Scenario 7: Weekly Review and Maintenance
-
-**When**: It's Friday and you want to clean up your workspace
-
-**What to Type**:
-```
-Do my weekly PARA review
-```
-
-**What Perplexity Will Do**:
-- Review all files in `/to-do/` and suggest cleanup
-- Check project statuses and ask if any are complete
-- Update Modified dates on active files
-- Suggest items to archive
-- Summarize active projects and areas
-- Create a report of what needs attention
-
----
-
-### Scenario 8: Meeting Notes
-
-**When**: You need to capture notes from a meeting
-
-**What to Type**:
-```
-Create meeting notes for [meeting name] on [date]
-```
-
-**Examples**:
-- "Create meeting notes for staff meeting on January 2"
-- "I need to document today's Joint Commission planning meeting"
-- "Create notes from the property fence contractor meeting"
-
-**What Perplexity Will Do**:
-- Determine if it's project-related or an area responsibility
-- Place in appropriate folder or subfolder
-- Name with date: `staff-meeting-notes-2026-01-02.md`
-- Create structure: Attendees, Topics, Decisions, Action Items
-- Link to related project or area files
-
----
-
-### Scenario 9: Research and Learning
-
-**When**: You're researching a topic and want to capture findings
-
-**What to Type**:
-```
-Create research notes about [topic]
-```
-
-**Examples**:
-- "Create research notes about new Joint Commission standards"
-- "I'm researching pasture grass species - create a note"
-- "Document my research on astrophotography equipment"
-
-**What Perplexity Will Do**:
-- Place in `/resources/` (if reference material) or related project folder
-- Include sources and links
-- Organize findings logically
-- Tag appropriately for future searching
-
----
-
-### Scenario 10: Creating Templates
-
-**When**: You want to create a reusable template for future notes
-
-**What to Type**:
-```
-Create a template for [type of note]
-```
-
-**Examples**:
-- "Create a template for project kickoff notes"
-- "I need a template for staff meeting notes"
-- "Create a weekly planning template"
-
-**What Perplexity Will Do**:
-- Place file in `/templates/`
-- Name as `template-[type].md`
-- Include placeholder sections and metadata
-- Add instructions for use
-- Make it easy to copy and customize
-
----
-
-## Advanced Usage
-
-### Multi-File Projects
-
-**When**: A project needs multiple related files
-
-**What to Type**:
-```
-Create a project folder for [project name] with files for [list files]
-```
-
-**Example**:
-"Create a project folder for Joint Commission 2026 with files for preparation checklist, staff training plan, and document review"
-
-**What Perplexity Will Do**:
-- Create `/projects/joint-commission-2026/` subfolder
-- Create README.md as overview
-- Create each requested file
-- Link files together
-- Maintain consistent metadata
-
----
-
-### Searching and Linking
-
-**When**: You want to connect related notes
-
-**What to Type**:
-```
-Show me all notes related to [topic] and link them together
-```
-
-**Example**:
-"Show me all notes related to staff management and make sure they're linked"
-
-**What Perplexity Will Do**:
-- Search across all folders
-- Identify related notes
-- Add cross-references
-- Update Related metadata fields
-- Create a summary of connections
-
----
-
-## Troubleshooting & Tips
-
-### If Perplexity Asks Clarifying Questions
-
-This is **good**! It means:
-- The AI needs more context to place the file correctly
-- It wants to ensure proper categorization
-- It's following the PARA methodology
-
-**Common Questions**:
-- "Does this have a deadline?" → Helps determine Project vs. Area
-- "Is this reference material or active work?" → Helps choose between Resource and Project/Area
-- "What would you like to name this?" → Asking for your preference
-
-**How to Respond**: Answer naturally and conversationally
-
----
-
-### Being More Specific
-
-The more context you provide, the better:
-
-❌ **Vague**: "Create a note about work stuff"
-
-✅ **Better**: "Create a note about work stuff" → AI asks questions → You clarify
-
-✅ **Best**: "Create a project note for Q1 performance reviews with deadline March 31st"
-
----
-
-### Checking the Structure
-
-**What to Type**:
-```
-Show me the current structure of my notes repository
-```
-
-**What Perplexity Will Do**:
-- List all active projects
-- List all areas
-- Show file counts
-- Identify any misplaced files
-- Suggest cleanup actions
-
----
-
-## Command Reference: Quick Phrases
-
-Here are simple, natural phrases you can use:
-
-### Creating:
-- "Create a [project/area/resource] note for..."
-- "Start tracking..."
-- "I need a note about..."
-- "Document..."
-- "Save this information about..."
-
-### Updating:
-- "Update [note name] with..."
-- "Add to [note name]..."
-- "Append to..."
-- "Edit [note name]..."
-
-### Organizing:
-- "Archive [note name]"
-- "Move [note name] to..."
-- "This project is complete"
-- "Clean up my to-do lists"
-- "Do my weekly review"
-
-### Finding:
-- "Show me all [projects/areas/resources]"
-- "Find notes about..."
-- "What's related to..."
-- "List my active projects"
-
----
-
-## Real-World Examples
-
-### Example 1: Healthcare Administrator
-
-**Monday Morning**:
-"Create my daily to-do list for today with priority items"
-
-**Starting New Work**:
-"Create a project note for Joint Commission survey preparation with deadline March 15, 2026"
-
-**After a Meeting**:
-"Create meeting notes for today's compliance committee meeting"
-
-**Saving Information**:
-"Create a resource note about the new CMS billing codes for 2026"
-
-**End of Week**:
-"Do my weekly PARA review and clean up completed tasks"
-
-### Example 2: Property Owner
-
-**Planning Improvement**:
-"Create a project note for spring pasture renovation starting in March"
-
-**Tracking Maintenance**:
-"Create an area note for ongoing property maintenance"
-
-**Saving Research**:
-"Create a resource about best practices for pasture grass selection in Montana"
-
-**Contractor Meeting**:
-"Create meeting notes for the fence contractor consultation"
-
----
+**What you say**:
+- "Save these SQL query examples for future reference"
+- "I want to keep this astrophotography equipment guide"
+- "Store this information about BASB methodology"
+
+**What the AI does**:
+- Creates file in `/resources` folder
+- Organizes by topic
+- Names as: `topic-reference.md` or `topic-guide.md`
+- Tags for easy retrieval
+
+**You don't need to say**:
+- "Put this in resources"
+- "This is reference material"
+
+### Scenario 4: Completing a Project
+
+**What you say**:
+- "The website redesign is complete"
+- "I finished the kitchen renovation project"
+- "Mark the annual review as done"
+
+**What the AI does**:
+- Moves file from `/projects` to `/archive`
+- Updates metadata with completion date
+- Maintains links to related files
+- Suggests cleanup of related tasks
+
+**You don't need to say**:
+- "Move this from projects to archive"
+- "Update the status metadata"
+
+### Scenario 5: Adding Tasks
+
+**What you say**:
+- "Add 'finalize budget' to my website redesign tasks"
+- "I need to schedule dentist appointment this month"
+- "Create a high-priority task to review Q3 numbers by Friday"
+
+**What the AI does**:
+- Adds task to `/to-do` folder
+- Links to parent project or area
+- Formats with priority and due date
+- Uses correct task syntax
+
+**You don't need to say**:
+- "Create a task in the to-do folder"
+- "Link it to the project file"
+- "Use the task format"
+
+### Scenario 6: Meeting Notes
+
+**What you say**:
+- "Take notes on today's quarterly planning meeting"
+- "Document the team standup from this morning"
+- "Record notes from my 1-on-1 with manager"
+
+**What the AI does**:
+- Creates file in appropriate location (project or area)
+- Uses meeting notes template
+- Adds date and attendees
+- Links to relevant project/area
+
+**You don't need to say**:
+- "Use the meeting notes template"
+- "Figure out if this is a project or area meeting"
+
+### Scenario 7: Research and Planning
+
+**What you say**:
+- "Research options for new project management tools"
+- "Collect information about Montana property taxes"
+- "Compare astrophotography telescope options"
+
+**What the AI does**:
+- Creates file in `/resources` if general research
+- Or in `/projects` if tied to active project
+- Organizes findings logically
+- Links to related notes
+
+**You don't need to say**:
+- "Decide if this is a resource or project"
+- "Create appropriate file structure"
+
+### Scenario 8: Reviewing and Updating
+
+**What you say**:
+- "Update my professional development goals"
+- "Review the home maintenance area"
+- "Check progress on website redesign"
+
+**What the AI does**:
+- Finds existing file in correct category
+- Opens for editing
+- Suggests creating review entry
+- Updates last-modified metadata
+
+**You don't need to say**:
+- "Find the file in the areas folder"
+- "Open professional-development-overview.md"
+
+### Scenario 9: Searching and Retrieving
+
+**What you say**:
+- "Find my notes about SQL queries"
+- "Show me all active projects"
+- "What resources do I have about healthcare compliance?"
+
+**What the AI does**:
+- Searches across appropriate categories
+- Returns relevant files
+- Shows recent updates
+- Suggests related content
+
+**You don't need to say**:
+- "Search in the resources folder"
+- "Look for files matching..."
+
+### Scenario 10: Managing Inactive Items
+
+**What you say**:
+- "The graduate school area is no longer relevant"
+- "Archive old 2020 tax planning resources"
+- "I'm no longer working on the garden shed project"
+
+**What the AI does**:
+- Moves to `/archive` folder
+- Preserves structure and links
+- Updates metadata
+- Suggests periodic cleanup
+
+**You don't need to say**:
+- "Move this to archive"
+- "Mark it as inactive"
+- 
+### Scenario 11: Transcribing Handwritten Notes from iPhone Photos
+
+**What you say**:
+- "I took a picture of my meeting notes, transcribe them and update the website project file"
+- "Here's a photo of my handwritten to-do list, add these tasks to the appropriate files"
+- "Transcribe this handwritten note and save it in my professional development area"
+- "I photographed my brainstorming notes for the kitchen renovation, organize them in the project"
+
+**What the AI does**:
+- Uses OCR/vision capabilities to read the handwritten text from your iPhone photo
+- Transcribes the content accurately
+- Determines the appropriate PARA category based on content and your description
+- Updates existing file or creates new one as needed
+- Commits changes to the GitHub repository (work or personal account as specified)
+- Maintains proper formatting and structure
+
+**You don't need to say**:
+- "Use OCR to extract the text"
+- "Parse the handwriting"
+- "Determine which repo to use"
+- "Commit the changes to GitHub"
+
+**How to do this**:
+
+1. **Take the photo**: Use your iPhone camera to photograph your handwritten notes
+   - Ensure good lighting and the text is clearly visible
+   - Photo can be from Camera app or screenshot from Notes app
+
+2. **Share with Perplexity**: 
+   - Open Perplexity on your iPhone
+   - Tap the camera/attachment icon
+   - Select your photo
+   - Add your natural language instruction
+
+3. **Specify the context**:
+   - What the notes are about
+   - Which project/area they relate to  
+   - Whether it's for work (VHA repo) or personal (cainlayder repo)
+   - Any specific organization preferences
+
+**Example interactions**:
+
+**Example 1 - Meeting Notes**:
+"Here's a photo of my handwritten notes from today's project kickoff meeting. Transcribe these and add them to the website redesign project file. This is for my personal repo."
+
+**Example 2 - Task List**:
+"I wrote down some tasks on paper. [attach photo] These are all related to home maintenance. Add them to my to-do folder with appropriate priorities based on the notes. Personal account."
+
+**Example 3 - Research Notes**:
+"[attach photo] These are my handwritten research notes about SQL optimization techniques. Create a new resource file for this and save it in my work repository."
+
+**Example 4 - Quick Capture**:
+"Transcribe this sticky note [attach photo] - it's ideas for the Q1 planning. Add to my work projects for the strategic planning project."
+
+**What repository?**:
+- **Work/VHA account** (seth-chandler-vha/notes_and_to_do): Specify "work repo", "VHA account", or "work"
+- **Personal account** (cainlayder/notes_and_to-do): Specify "personal repo", "personal account", or "personal"
+- If not specified, AI will ask which repository to use
+
+**The AI handles all the technical details**:
+- Reading and transcribing your handwriting
+- Understanding context from the photo (diagrams, arrows, highlighting)
+- Organizing the content logically
+- Applying proper markdown formatting
+- Navigating to the correct GitHub repository
+- Finding or creating the appropriate file
+- Updating the file with transcribed content
+- Committing and pushing changes
+
+**Tips for best results**:
+- ✅ Write clearly and legibly
+- ✅ Use good lighting when photographing
+- ✅ Mention the project/area name in your instruction
+- ✅ Specify work vs. personal repository
+- ✅ Include any important context ("these are high priority", "this is for next week", etc.)
+- ✅ If you have multiple pages, you can attach multiple photos
+
+## Pro Tips for Natural Interaction
+
+### Be Conversational
+✅ **Good**: "I'm starting a project to renovate the kitchen, should be done by summer"
+❌ **Unnecessary**: "Create project file kitchen-renovation in projects folder with completion date summer 2025"
+
+### Provide Context, Not Structure
+✅ **Good**: "Take notes on the budget meeting for the website project"
+❌ **Unnecessary**: "Create meeting-notes file in projects/website-redesign/ folder"
+
+### Use Natural Time References
+✅ **Good**: "This is due next Friday"
+✅ **Good**: "Target completion Q2"
+✅ **Good**: "By end of month"
+
+### Let the AI Ask for Clarity
+If the AI needs more information to categorize correctly, it will ask:
+- "Is this an ongoing responsibility or a specific project with a deadline?"
+- "Is this reference material or something you're actively working on?"
+
+### Trust the System
+The AI has been trained on the PARA method specifically for your repository. It understands:
+- Projects have deadlines
+- Areas are ongoing
+- Resources are for reference
+- Archive is for completed/inactive items
+
+## What to Specify (and When)
+
+### Always Specify:
+- **Deadlines** for projects: "due March 15", "by Q2", "next Friday"
+- **Priority** for tasks: "high priority", "urgent", "when I have time"
+- **Relationships**: "related to the website project", "part of professional development"
+
+### Sometimes Specify:
+- **Status**: "in progress", "blocked", "on hold" (useful for updates)
+- **Tags**: "VA-related", "personal", "work" (helps with organization)
+- **Review frequency**: "review monthly", "quarterly check-in" (for areas)
+
+### Never Need to Specify:
+- Folder names or paths
+- File naming conventions
+- Metadata structure
+- Template to use
+- Link formatting
+
+## Examples of Complex Requests
+
+The AI can handle multi-step requests:
+
+**Example 1**:
+"I'm starting a new project to implement a data dashboard for our team. It's due by end of Q1. Create the project notes and also add a high-priority task to draft requirements this week. Link it to my ongoing team management responsibilities."
+
+**What happens**:
+1. Creates project file in `/projects`
+2. Adds task to `/to-do` with priority and deadline
+3. Links project to existing area file
+4. Sets up metadata with Q1 deadline
+
+**Example 2**:
+"The kitchen renovation is complete. Archive the project and create a new home maintenance area note about annual kitchen deep cleaning."
+
+**What happens**:
+1. Moves project from `/projects` to `/archive`
+2. Creates new area file in `/areas`
+3. Links archive project to new area for reference
+4. Updates all metadata
+
+## Troubleshooting
+
+### If the AI Creates Something in the Wrong Place
+Just say: "Actually, this should be [description]" and it will move and reorganize.
+
+Example:
+- You: "Track my reading list"
+- AI: Creates in `/projects`
+- You: "Actually, this is ongoing, not a one-time project"
+- AI: Moves to `/areas` and adjusts
+
+### If You're Unsure Where Something Goes
+The AI will use the decision tree from the README to figure it out. But you can also ask:
+- "Should my reading list be a project or area?"
+- "Where should I keep SQL examples?"
+
+### If You Want to Override the AI's Decision
+You can always be explicit:
+- "Create this as a resource even though it sounds like a project"
+- "I want this in projects, not areas"
 
 ## Remember
 
-1. **You don't need to know the file structure** - The AI handles it
-2. **You don't need to remember naming conventions** - The AI follows them
-3. **Just describe what you need naturally** - The AI understands context
-4. **The AI will ask questions if unclear** - This is helpful, not annoying
-5. **Review the README occasionally** - But you don't need to memorize it
+The goal of this system is to reduce cognitive load. You should be thinking about your work, not about file organization. The AI handles the structure so you can focus on content.
 
----
+**Think**: "What do I need to capture?"
+**Not**: "Where should I file this?"
 
-## Getting Started Today
-
-Try these three commands right now:
-
-1. **"Create my daily to-do list for today"**  
-   → See how the AI structures your tasks
-
-2. **"Show me the current structure of my repository"**  
-   → Understand what's already here
-
-3. **"Create a project note for [something you're working on]"**  
-   → Experience the full workflow
-
----
-
-**Questions?** Just ask Perplexity: "How do I [what you want to do] in my notes repository?"
-
-The AI has full context from the README and will guide you through any scenario.
-
----
-*For technical details and AI agent workflows, see README.md*
+The more naturally you interact, the better the system works. Trust the PARA method and the AI's training to keep everything organized correctly.
